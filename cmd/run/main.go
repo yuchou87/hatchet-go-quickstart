@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	workflows "hatchet-go-quickstart/workflows"
+	"hatchet-go-quickstart/workflows"
 
 	v1 "github.com/hatchet-dev/hatchet/pkg/v1"
 )

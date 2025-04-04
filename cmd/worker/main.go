@@ -1,7 +1,7 @@
 package main
 
 import (
-	workflows "hatchet-go-quickstart/workflows"
+	"hatchet-go-quickstart/workflows"
 
 	v1 "github.com/hatchet-dev/hatchet/pkg/v1"
 	"github.com/hatchet-dev/hatchet/pkg/v1/worker"
@@ -15,7 +15,7 @@ func main() {
 		panic(err)
 	}
 
-	worker, err := hatchet.Worker(
+	w, err := hatchet.Worker(
 		worker.CreateOpts{
 			Name: "first-workflow-worker",
 		},
@@ -26,7 +26,7 @@ func main() {
 		panic(err)
 	}
 
-	err = worker.StartBlocking()
+	err = w.StartBlocking()
 
 	if err != nil {
 		panic(err)
